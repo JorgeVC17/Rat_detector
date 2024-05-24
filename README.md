@@ -50,7 +50,7 @@ In deze map kan je de verschillende train modellen van de dataset zien. Als je o
 
 ![*Figuur 7: Resultaten van de getrainde model*](documents/screenshots/figuur7.png)
 
-Nadat je je beste getrainde model heb gevonden, kan je je getrainde model gebruiken om giraffen en zebra's van youtube videos te herkennen. Hiervoor kan je de volgende code's in de map **test_your_model** gebruiken.
+Nadat je je beste getrainde model heb gevonden, kan je je getrainde model gebruiken om ratten van youtube, live videos, foto's te herkennen. Hiervoor kan je de volgende code's in de map **test_your_model** gebruiken.
 
 ## Requirements
 
