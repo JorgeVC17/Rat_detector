@@ -28,6 +28,30 @@ Je kan je gekozen afbeeldingen in deze tools uploaden. Nadat de  gekozen afbeeld
 
 ![*Figuur 3: Voorbeeld van het gebruik van CVAT om labels te generen*](documents/screenshots/figuur3.png)
 
+Nadat we de dataset hebben gedownload of gemaakt, kunnen we YOLOv8 gebruiken met de volgende codes:
+
+## Training YOLOv8 model
+
+YOLOv8 kan niet voor zichzelf de bestanden van de gekozen dataset zoeken. Hierdoor moet je een .yaml bestand coderen.
+
+Een .yaml bestand geeft de instructie aan je computer om de bestanden van de dataset te vinden. Als je een .yaml schrijft moet op de volgende manier eruit zien:
+
+![*Figuur 4: config.yaml*](documents/screenshots/figuur4.png)
+
+Nadat we de .yaml bestand hebben gecodeerd, kunnen we de volgende code uitvoeren:
+
+![*Figuur 5: Code om YOLOv8 algoritme te trainen*](documents/screenshots/figuur5.png)
+
+Nadat je de algoritme van YOLOv8 met de foto's van de dataset heb getraind, krijgt je een nieuwe map met de naam "runs" in je directory.
+
+![*Figuur 6: Runs directory*](documents/screenshots/figuur6.png)
+
+In deze map kan je de verschillende train modellen van de dataset zien. Als je op een van deze mappen klikt, kan de resultaten en "weights" van je getrainde model zien. 
+
+![*Figuur 7: Resultaten van de getrainde model*](documents/screenshots/figuur7.png)
+
+Nadat je je beste getrainde model heb gevonden, kan je je getrainde model gebruiken om giraffen en zebra's van youtube videos te herkennen. Hiervoor kan je de volgende code's in de map **test_your_model** gebruiken.
+
 ## Requirements
 
 -   opencv_python==4.8.1.78
