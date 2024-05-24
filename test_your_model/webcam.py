@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import cv2
 import math 
+import os
 
 # start webcam
 cap = cv2.VideoCapture(0)
@@ -8,7 +9,7 @@ cap.set(3, 640)
 cap.set(4, 480)
 
 # model
-model_path = "\\runs\\detect\\train2\\weights\\best.pt"
+model_path = os.path.join("runs/detect/train/weights/best.pt")
 model = YOLO(model_path)
 
 # object classes

@@ -1,12 +1,13 @@
 import cv2
 from ultralytics import YOLO
+import os
 
 # Load the YOLOv8 model
-model_path = "C:\\Users\\jorge\\Documents\\Python\\Rat_detector\\runs\\detect\\train2\\weights\\best.pt"
+model_path = os.path.join("runs/detect/train/weights/best.pt")
 model = YOLO(model_path)
 
 # Open the video file
-video_path = "C:\\Users\\jorge\\Documents\\Python\\Rat_detector\\test_videos\\test_video1.mp4"
+video_path = os.path.join("test_videos/test_video1.mp4")
 cap = cv2.VideoCapture(video_path)
 
 # Loop through the vi deo frames

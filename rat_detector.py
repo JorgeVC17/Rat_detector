@@ -1,5 +1,5 @@
 from ultralytics import YOLO
-
+import os
 #Load model
 model = YOLO("yolov8n.pt")
 

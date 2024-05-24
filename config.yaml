@@ -1,6 +1,6 @@
 #Bestand.yaml
 #Met de argument "path" geeft je aan de computer de instructie om de dataset in je directory te vinden
-path: C:\Users\jorge\Documents\Python\Rat_detector\data
+path: C:\Users\jorge\Documents\Python\Rat_detector\data #Veranderd de absolute path voor de path in je computer
 
 #Hierbij geeft je aan de computer de complementaire directory om "train data" en "validation data" te vinden
 train: images\train
