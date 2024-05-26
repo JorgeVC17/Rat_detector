@@ -1,22 +1,23 @@
 from ultralytics import YOLO
 import os
 
+# Pad naar het getrainde YOLO-mode
 model_path = os.path.join("runs/detect/train/weights/best.pt")
-#Load model
+
+# Laad het model
 model = YOLO(model_path) 
 
-# Define path to directory containing images and videos for inference
+# Pad naar de map met alle test foto's
 source = os.path.join('data/images/test')
 
-# Define the save directory for results
+# Maak een opslag directory voor resultaten
 save_dir = os.path.join('results/')
 os.makedirs(save_dir, exist_ok=True)
 
-# Run inference on the source directory
-results = model(source, stream=True, save=True, project=save_dir)  # generator of Results objects
+# Voer objectdetectie uit op elk bestand in de map
+results = model(source, stream=True, save=True, project=save_dir)  # Opslag directory
 
-# Process and display results
+# Resultaten laten zien
 for result in results:
-    # Print or log the result
     print(result)
 

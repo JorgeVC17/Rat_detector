@@ -2,36 +2,36 @@ import cv2
 from ultralytics import YOLO
 import os
 
-# Load the YOLOv8 model
+# Pad naar het getrainde YOLO-model
 model_path = os.path.join("runs/detect/train/weights/best.pt")
 model = YOLO(model_path)
 
-# Open the video file
+# Open de video bestand
 video_path = os.path.join("test_videos/test_video1.mp4")
 cap = cv2.VideoCapture(video_path)
 
-# Loop through the vi deo frames
+# Oneindige loop om continu beelden/frames van de videos te verwerken
 while cap.isOpened():
-    # Read a frame from the video
+    # Lees een frame van de video
     success, frame = cap.read()
 
     if success:
-        # Run YOLOv8 inference on the frame
+        #  Voer objectdetectie uit op elk frame
         results = model(frame)
 
-        # Visualize the results on the frame
+        # Visualiseert de resultaten op het frame
         annotated_frame = results[0].plot()
 
-        # Display the annotated frame
+        # Genoteerd frame laten zien
         cv2.imshow("YOLOv8 Inference", annotated_frame)
 
-        # Break the loop if 'q' is pressed
+         # Stop de loop af als de 'q'-toets wordt ingedrukt
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
     else:
-        # Break the loop if the end of the video is reached
+        # Stop de loop af aan het eind van de video
         break
 
-# Release the video capture object and close the display window
+# Display venster afsluiten
 cap.release()
 cv2.destroyAllWindows()
